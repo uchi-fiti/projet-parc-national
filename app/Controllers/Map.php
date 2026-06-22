@@ -6,6 +6,6 @@ class Map extends BaseController
 {
     public function parcNationaux()
     {
-        return view('maps/parcs');
+        return view('maps/testfiltre');
     }
 }

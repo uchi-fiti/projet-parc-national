@@ -82,7 +82,7 @@ class Database extends Config
            'DSN'        => '',
            'hostname'   => '127.0.0.1',
            'username'   => 'postgres',
-           'password'   => 'postgres67',
+           'password'   => 'postgres',
            'database'   => 'parc_national_db',
            'schema'     => 'public',
            'DBDriver'   => 'Postgre',

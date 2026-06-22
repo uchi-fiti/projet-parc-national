@@ -11,6 +11,11 @@
 </head>
 <body>
 
+<select id="especeFilter">
+    <option value="">-- Toutes les espèces --</option>
+</select>
+
+
 <div id="map"></div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

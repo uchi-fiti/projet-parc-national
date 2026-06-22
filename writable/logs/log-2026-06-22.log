@@ -1,0 +1,201 @@
+ERROR - 2026-06-22 15:14:47 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot; in /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(555): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/noah/S4/SIG/projet/code/projet-parc-national/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+#8 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+#9 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+#10 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/noah/S4/SIG/projet/code/projet-parc-national/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 {main}
+CRITICAL - 2026-06-22 15:14:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+[Method: GET, Route: api/all-parcs]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-22 15:15:32 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot; in /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(555): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/noah/S4/SIG/projet/code/projet-parc-national/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+#8 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+#9 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+#10 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/noah/S4/SIG/projet/code/projet-parc-national/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 {main}
+CRITICAL - 2026-06-22 15:15:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+[Method: GET, Route: api/all-parcs]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-22 15:15:44 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot; in /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(555): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/noah/S4/SIG/projet/code/projet-parc-national/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+#8 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+#9 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+#10 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/noah/S4/SIG/projet/code/projet-parc-national/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 {main}
+CRITICAL - 2026-06-22 15:15:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+[Method: GET, Route: api/all-parcs]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-22 15:16:00 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot; in /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/Postgre/Connection.php(78): pg_connect()
+#2 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(555): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#4 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#5 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+#6 /home/noah/S4/SIG/projet/code/projet-parc-national/system/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#7 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+#8 /home/noah/S4/SIG/projet/code/projet-parc-national/app/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+#9 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+#10 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /home/noah/S4/SIG/projet/code/projet-parc-national/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#12 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 /home/noah/S4/SIG/projet/code/projet-parc-national/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#14 /home/noah/S4/SIG/projet/code/projet-parc-national/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#15 {main}
+CRITICAL - 2026-06-22 15:16:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+connection to server at &quot;127.0.0.1&quot;, port 5432 failed: FATAL:  password authentication failed for user &quot;postgres&quot;
+[Method: GET, Route: api/all-parcs]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Models/PointsParcsModel.php(17): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/Api.php(12): App\Models\PointsParcsModel->getAllParcs()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allParcs()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ERROR - 2026-06-22 15:27:40 --> pg_query(): Query failed: ERROR:  relation &quot;espece&quot; does not exist
+LINE 2: FROM &quot;espece&quot;
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 200.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Api.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allEspeces()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-06-22 15:27:40 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;espece&quot; does not exist
+LINE 2: FROM &quot;espece&quot;
+             ^
+[Method: GET, Route: api/all-especes]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 2 APPPATH/Controllers/Api.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allEspeces()
+ 4 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 6 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 8 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-06-22 15:27:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  relation &quot;espece&quot; does not exist
+LINE 2: FROM &quot;espece&quot;
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 212.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\Postgre\Connection->execute()
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 4 APPPATH/Controllers/Api.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allEspeces()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2026-06-22 15:27:40 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  relation &quot;espece&quot; does not exist
+LINE 2: FROM &quot;espece&quot;
+             ^
+in SYSTEMPATH/Database/Postgre/Connection.php on line 200.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/Database/Postgre/Connection.php(200): pg_query()
+ 3 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\Postgre\Connection->execute()
+ 4 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery()
+ 5 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 6 APPPATH/Controllers/Api.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Api->allEspeces()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
