@@ -12,3 +12,5 @@ $routes->get('map/parc-nationaux', 'Map::parcNationaux'); // TODO fait: Afficheo
 $routes->get('api/all-parcs', 'Api::allParcs'); // api mi-fetch anle parc rehetra
 $routes->get('api/all-especes', 'Api::allEspeces');
 $routes->get('api/parcs/espece/(:num)', 'Api::parcsByEspece/$1');
+$routes->get('api/routes/espece/(:num)', 'Api::routesLeadingToParcWithEspece/$1');
+$routes->get('api/routes', 'Api::toutesLesRoutes');

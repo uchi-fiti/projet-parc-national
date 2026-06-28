@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ).addTo(map);
 
     const markersLayer = L.layerGroup().addTo(map);
+    let routesLayer = L.layerGroup().addTo(map);
 
     function afficherParcs(parcs)
     {
@@ -108,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 `);
         });
     }
+    
 
     function chargerTousLesParcs()
     {
@@ -169,6 +171,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    function chargerToutesLesRoutes() {
+
+    fetch("<?= base_url('api/routes') ?>")
+        .then(response => response.json())
+        .then(routes => afficherRoutes(routes))
+        .catch(err => console.error(err));
+
+}
+
+    function afficherRoutes(routes) {
+
+    routesLayer.clearLayers();
+
+    routes.forEach(route => {
+
+        const geojson = JSON.parse(route.geometry);
+
+        L.geoJSON(geojson, {
+            style: {
+                color: "#e74c3c",
+                weight: 4,
+                opacity: 0.9
+            },
+
+            onEachFeature: function(feature, layer) {
+
+                layer.bindPopup(`
+                    <h5>${route.nom}</h5>
+                    <b>Départ :</b> ${route.depart}<br>
+                    <b>Arrivée :</b> ${route.arrivee}<br>
+                    <b>Distance :</b> ${route.distance} km
+                `);
+
+            }
+
+        }).addTo(routesLayer);
+
+    });
+
+}
+
     document
         .getElementById('especeFilter')
         .addEventListener(
@@ -178,13 +221,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const especeId =
                     this.value;
 
-                if (
-                    especeId === ''
-                ) {
+                if (especeId === '') {
                     chargerTousLesParcs();
+                    chargerToutesLesRoutes();
                     return;
                 }
-
+                
                 fetch(
                     `<?= base_url('api/parcs/espece') ?>/${especeId}`
                 )
@@ -206,11 +248,34 @@ document.addEventListener('DOMContentLoaded', () => {
                             err
                         );
                     });
+
+                fetch(
+                    `<?= base_url('api/routes/espece/') ?>/${especeId}`
+                )
+                    .then(response => {
+
+                        if (!response.ok)
+                            throw new Error(
+                                response.status
+                            );
+
+                        return response.json();
+                    })
+                    .then(routes => {
+                        afficherRoutes(routes);
+                    })
+                    .catch(err => {
+                        console.error(
+                            'Erreur filtre :',
+                            err
+                        );
+                    });
             }
         );
 
     chargerEspeces();
     chargerTousLesParcs();
+    chargerToutesLesRoutes();
 });
 
 </script>
